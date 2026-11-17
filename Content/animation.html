@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Animation — playground</title>
+  <style>
+    h1{text-align: center; font-variant: small-caps;}
+    .circle {width: 150px; height: 150px; border-radius: 50%; display:inline-block;}
+    .center{display: block; margin:32px auto}
+    /* ឧ.១ ជំហានទី១  */
+    @keyframes colors {
+      0% {background:red;}
+      50%{background:yellow;}
+      100%{background:greenyellow;}
+    }
+
+    
+    /* ឧ.២ ជំហានទី១  */
+    @keyframes fades{
+      0%{opacity:1;}
+      25%{opacity:0.7;}
+      50%{opacity:0.4;}
+      75%{opacity:0.1;}
+      100%{opacity:0;}
+    }
+
+    
+    
+    /* ឧ.១ ជំហានទី២ */
+    .colors-circle{
+      animation-name: colors;
+      animation-duration: 4s;
+      animation-timing-function: ease;
+    }
+    
+    
+    /* ឧ.២ ជំហានទី២  */
+    .fades-circle{
+      animation-name: fades;
+      animation-duration: 4s;
+      animation-timing-function: ease;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Animation</h1>
+  <!-- ឧ.១ ជំហានទី៣ -->
+  <div class="circle center colors-circle" style="background:red;"></div>
+  
+  <div style="width:459px;" class="center">
+    <!-- ឧ.២ ជំហានទី៣ -->
+    <div class="circle fades-circle" style="background-color: #D95F00;"></div>
+    <div class="circle fades-circle" style="background-color: #1A2F45;"></div>
+    <div class="circle fades-circle" style="background-color: #F0F0F0;"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Box</title>
+  </head>
+  <body>
+    <h2>1. display : flex ;</h2>
+    <nav style="display: flex">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+    </nav>
+
+    <h2>2. display : flex; justify-content : center</h2>
+    <nav style="display: flex; justify-content: center">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+    </nav>
+
+    <h2>3. display : flex; justify-content : flex-end</h2>
+    <nav style="display: flex; justify-content: flex-end">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+    </nav>
+
+    <h2>4. display : flex; justify-content : space-around</h2>
+    <nav style="display: flex; justify-content: space-around">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+    </nav>
+
+    <h2>5. display : flex; justify-content : space-between</h2>
+    <nav style="display: flex; justify-content: space-between">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+    </nav>
+
+    <h2>6. display : flex; justify-content : space-evenly</h2>
+    <nav style="display: flex; justify-content: space-evenly">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+    </nav>
+
+    <h2>7. display:flex; align-items:flex-end;</h2>
+    <nav
+      style="
+        background-color: black;
+        height: 64px;
+        display: flex;
+        align-items: flex-end;
+      "
+    >
+      <a href="#">flex item 1</a>
+      <a href="#">flex item 2</a>
+      <a href="#">flex item 3</a>
+    </nav>
+
+     <h2>8. display:flex; align-items:center;</h2>
+    <nav
+      style="
+        background-color: black;
+        height: 64px;
+        display: flex;
+        align-items: center;
+      "
+    >
+      <a href="#">flex item 1</a>
+      <a href="#">flex item 2</a>
+      <a href="#">flex item 3</a>
+    </nav>
+
+    <h2>9. display : flex; gap: 36px</h2>
+    <nav style="display: flex; gap: 36px;">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+    </nav>
+
+    <h2>10. display: flex; *flext item 3* -> order: -1</h2>
+    <nav style="display: flex;">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#" style="background: yellow; order: -1;">flex item 3</a>
+    </nav>
+
+    <h2>11. display: flex; *flext item 3* -> order: 1</h2>
+    <nav style="display: flex;">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#" style="background: yellow; order: 1;">flex item 3</a>
+    </nav>
+
+    <h2>12. display: flex; *flext item 1* -> flex-grow: 1</h2>
+    <nav>
+        <a style="flex-grow: 1;" href="#">item 1</a>
+    </nav>
+
+    <h2>13. display: flex; *flext item 3* -> flex-grow: 1</h2>
+    <nav style="display: flex;">
+        <a href="#">flex item 1 </a>
+        <a href="#">flex item 2 </a>
+        <a style="flex-grow: 1;" href="#">flex item 3</a>
+    </nav>
+
+    <h2>14. display: flex; *flext item 5* -> flex-grow: 1</h2>
+    <nav style="display: flex;">
+        <a href="#">flex item 1 </a>
+        <a href="#">flex item 2 </a>
+        <a href="#">flex item 3 </a>
+        <a href="#">flex item 4 </a>
+        <a style="flex-grow: 1;" href="#">flex item 5</a>
+    </nav>
+
+    <h2>15. display: flex; *flext item 2-5* -> flex-grow: 1</h2>
+    <nav>
+        <a href="#">flex item 1</a>
+        <a href="#" style="flex-grow: 1">flex item 2 </a>
+        <a href="#" style="flex-grow: 2">flex item 3 </a>
+        <a href="#" style="flex-grow: 3">flex item 4 </a>
+        <a href="#" style="flex-grow: 4">flex item 5 </a>
+    </nav>
+
+    <h2>16. display:flex; *flex item 1*->flex-shrink:1 and flex item 2-5 -> flex-shrink:0</h2>
+    <nav>
+        <a href="#" style="flex-shrink: 1">flex item 1 </a>
+        <a href="#" style="flex-shrink: 0">flex item 2 </a>
+        <a href="#" style="flex-shrink: 0">flex item 3 </a>
+        <a href="#" style="flex-shrink: 0">flex item 4 </a>
+        <a href="#" style="flex-shrink: 0">flex item 5 </a>
+    </nav>
+
+    <h2>17. display:flex; flex-direction: row-reverse;</h2>
+    <nav style="display: flex; flex-direction: row-reverse">
+        <a href="#">flex item 1 </a>
+        <a href="#">flex item 2 </a>
+        <a href="#">flex item 3 </a>
+    </nav>
+
+    <h2>18. display:flex; flex-direction: column;</h2>
+    <nav style="width: 12vh; display: flex; flex-direction: column">
+        <a href="#">flex item 1 </a>
+        <a href="#">flex item 2 </a>
+        <a href="#">flex item 3 </a>
+    </nav>
+
+    <h2>19. display:flex; flex-direction: column-reverse;</h2>
+    <nav style="width: 12vh; display: flex; flex-direction: column-reverse">
+        <a href="#">flex item 1 </a>
+        <a href="#">flex item 2 </a>
+        <a href="#">flex item 3 </a>
+    </nav> 
+  </body>
+</html>

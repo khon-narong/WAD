@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title> Transition — play ground</title>
+  <style>
+    .i-button {padding:10px 20px; border:none; border-radius:5px; font-size:16px; cursor:pointer; background:red; color:darkgray;}
+    /* ឧ.១ ជំហានទី១ កំណត់ការប្តូរ transition: <លក្ខណៈនឹងផ្តូរ> <រយៈត្រូវប្រើដើម្បីដូរ> <មុខងារកំណត់ល្បឿន>; */
+    
+    .background-transition{transition:background-color 0.6s ease-in-out;}
+    /* ឧ.២ ជំហានទី១ transition: <លក្ខណៈទី១នឹងផ្តូរ> <រយៈត្រូវប្រើដើម្បីដូរចប់> <មុខងារកំណត់ល្បឿន>, <លក្ខណៈទី២នឹងផ្តូរ> <រយៈត្រូវប្រើដើម្បីដូរ> <មុខងារកំណត់ល្បឿន> <ពន្យារពេលមុនដើរ>; */
+    #transition:hover{background-color:yellow;}
+    
+    /* 
+      *** សម្គាល់
+        - លក្ខណៈត្រូវប្តូរ ដែលល្អប្រើមានដូចជា color, opacity, transform ។ បើអាចកុំប្រើលក្ខណៈ height, width, margin, top, left, right, bottom​ ។
+        - រយៈពេលប្រើដើម្បីដូរឱ្យចប់សព្វគ្រប់ គួរនៅចន្លោះ 0.15s ត្រូវ១៥០០មីលីវិនាទី ដល់ 0.40s ត្រូវ៤០០មីលីវិនាទី។
+        - មុខងារកំណត់ល្បឿន 
+           . ease-out ផ្តើមលឿននិងបញ្ចប់យឺត
+           . ease-in-out ផ្តើមយឺត ពាក់កណ្តាលលឿន បញ្ចប់យឺត 
+    */
+    #change:hover { background-color:yellow;}
+    /* ជំហានទី២ កំណត់ពេលណាការប្តូរចាប់ផ្តើមដូចជា៖
+        :hover ពេលសំកាំង mouse នៅពីលើ
+        :focus ពេល form field form control ទទួល forcus ឬ​ cursor ។
+        :checked ពេលគេជ្រើសរើស check box ឬ radio button ។
+        JavaScript event ដូចជា click event, change event ។ល។
+    */
+    /* ឧ.១ ជំហានទី២ */
+    .colors-trasition{transition:background-color 0.4s ease-in-out, color 0.4s ease-in-out;}
+    
+    /* ឧ.២ ជំហានទី២ */
+    #transitions:hover{background-color:yellow; color:black;}
+    
+    
+  </style>
+</head>
+<body>
+  <h1>Transition and Animation</h1>
+  <h2>Transitions</h2>
+  <p>Transition គឺជាចលនាមួយកើតពីការប្តូរតម្លៃលក្ខណៈ​ ពីតម្លៃដើមទៅតម្លៃថ្មី ដោយកំណត់ រយៈពេលប្រើប្រាស់ដើម្បីប្តូរចប់ ព្រមទាំងមុខងារកំណត់ល្បឿន។</p>
+  <input type="button" id="change" class="i-button" value="background-color change — no transition">
+   <!--ឧ.១ ជំហានទី៣ -->
+  <input type="button" id="transition"  class="i-button background-transition" value="background-color transition — smoothly change">
+   <!--ឧ.២ ជំហានទី៣ -->
+  <input type="button" id="transitions"  class="i-button colors-transition" value="foreground and background colors transition">
+
+</body>
+</html>

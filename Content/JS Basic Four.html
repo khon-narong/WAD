@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather - attributes</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      transition: background 0.5s, color 0.5s;
+      margin-top: 60px;
+      background: #fdf6c3; /* sunny background */
+      color: #333;
+    }
+    img {
+      width: 350px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: 0.5s;
+    }
+    button {
+      width: 350px;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background: #3498db;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #1d6fa5;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">Sunny Day 🌞</h1>
+  <img id="imgWeather" src="../multimedia/image/sunny.png" alt="Sunny image">
+  <br>
+  <button id="btnSwitch">Switch to Rainy Mode</button>
+  <script>
+    // ជ្រើសរើសធាតុមានអាយឌី​ btnSwitch រួចតាងដោយធាតុអថេរ btnSwitch
+    const btnSwitch = document.getElementById("btnSwitch");
+    // ជ្រើសរើសធាតុមានអាយឌី​ imgWeather រួចតាងដោយធាតុអថេរ imgWeather
+    const imgWeather = document.getElementById("imgWeather");
+    // ជ្រើសរើសធាតុមានអាយឌី​ title រួចតាងដោយធាតុអថេរ title
+    const title = document.getElementById("title");
+    // បង្កើតអថេរ body តាង body ក្នុង hmtl document 
+    const body = document.body;
+    // បង្កើតអថេរ isSunny មានតម្លៃដំបូង true
+    let isSunny = true;
+
+    // ថែម click event ឱ្យ btnSwitch
+    btnSwitch.addEventListener("click", () => {
+      if (isSunny) {
+        // ដាក់តម្លៃថ្មីឱ្យ src attribute រាប់ធាតុ imgWeather 
+        imgWeather.setAttribute("src", "../multimedia/Image/rainy.avif");
+        // ដាក់តម្លៃថ្មីឱ្យ alt attribute រាប់ធាតុ imgWeather 
+        imgWeather.setAttribute("alt", "Rainy image");
+        //  🌧️ Change to Rainy
+        title.textContent = "Rainy Day 🌧️";
+
+        // ដូរពណ៌ផ្ទៃខាងក្រោយថ្មី #9ecafc ឱ្យធាតុ body
+        body.style.background = "#9ecafc";
+        // ដូរពណ៌អក្សរថ្មី #0b1d3a ឱ្យធាតុ body
+        body.style.color = "#0b1d3a";
+
+        // ដូរឃ្លារនៃប៊ូតុងទៅជា Switch to Sunny Mode 
+        btnSwitch.textContent = "Switch to Sunny Mode";
+        // ដូរពណ៌ផ្ទៃខាងក្រោយថ្មី #0066cc
+        btnSwitch.style.background = "#0066cc";
+      } else {
+        // 🌞 Change back to Sunny
+        imgWeather.setAttribute("src", "../multimedia/Image/sunny.avif");
+        imgWeather.setAttribute("alt", "Sunny image");
+
+        title.textContent = "Sunny Day 🌞";
+
+        // Change styles
+        body.style.background = "#fdf6c3";
+        body.style.color = "#333";
+
+        // Change button text and color
+        btnSwitch.textContent = "Switch to Rainy Mode";
+        btnSwitch.style.background = "#3498db";
+      }
+      isSunny = !isSunny; // ដូរឆ្លាស់រវាង​ true និង false 
+    });
+  </script>
+
+</body>
+</html>

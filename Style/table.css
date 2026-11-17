@@ -1,0 +1,53 @@
+html, body {font:16px/1.6 Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif; transition: background-color 0.5s, color 0.5s;}
+h1{text-align: center;}
+
+table {
+  /* Collapse multiple cell borders into a single, clean border */
+  border-collapse: collapse; 
+  width: 50vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px; /* Rounded corners for the whole table */
+  margin: 16px auto;
+  overflow: hidden; /* Ensures the shadow and border-radius are applied nicely */
+}
+thead, tfoot{height:50px;}
+/* 2. Table Header Styling (THEAD & TH) */
+thead {
+  /* This targets the entire header group (<thead>) */
+  background-color:black; /* A deep, professional blue/grey */
+  color: white; /* White text for high contrast */
+}
+
+th {
+  /* This targets the individual header cells (<th>) */
+  padding: 12px 15px;
+  text-align: left; /* Align column headers to the left */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+tbody{height:233px;}
+/* 3. Table Body Styling (TBODY & TD) */
+tbody tr {
+  /* This targets every row in the body (<tr>) */
+  border-bottom: 1px solid #dddddd; /* Light separator line between rows */
+}
+
+td {
+  /* This targets the individual data cells (<td>) */
+  padding: 10px 15px; /* Slightly less vertical padding than headers */
+}
+
+/* 4. The Magic Stripe (Zebra Stripes) */
+tbody tr:nth-of-type(even) {
+  /* Selects every even row for a lighter background */
+  background-color: #f3f3f3; 
+}
+
+/* 5. Hover Effect (Optional but highly recommended for UX) */
+tbody tr:hover {
+  /* Highlights the row when the user mouses over it */
+  background-color: gray;
+  color: white;
+}
+
+tfoot td{background:gray; color:white; text-align: center; font-size:18px;  font-weight:bold; font-variant: small-caps;}

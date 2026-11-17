@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="../Style/default.css">
+    <style>
+        h1,p{
+            text-align: center;
+        }
+        form label,form input,form select,form textarea{
+            display: block;
+            width: 100%;
+            border-radius: 4px;
+        }
+        form input:not([type="checkbox"]),form select{
+            height: 32px;
+            border-width: 1px;
+        }
+        form{
+            max-width: 500px;
+            margin: 16px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+
+        }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html">about</a>
+        <a href="work.html">project/work</a>
+        <a href="resume.html">resume</a>
+        <a href="contact.html">contact</a>
+      </nav>
+    </header>
+    <main>
+      <section id="contact" class="container">
+        <h1>Get in touch</h1>
+        <p>Feel free to reach out via following form.</p>
+        <form action="mailto:sivgech@gmail.com" method="post" enctype="text/plain">
+          <div>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+123456789">
+          </div>
+          <div>
+            <label for="company">Company / Organization</label>
+            <input type="text" name="company" id="company">
+          </div>
+          <div class="full-width">
+            <label for="subject">Subject</label>
+            <input type="text" name="subject" id="subject">
+          </div>
+          <div class="full-width">
+            <label for="reason">Reason for Contact</label>
+            <select name="reason" id="reason">
+              <option value="">--Select an Option--</option>
+              <option value="project">Work on a project</option>
+              <option value="job">Job Opportunity</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="general">General Inqury</option>
+            </select>
+          </div>
+          <div class="full-width">
+            <label for="message">Your Message</label>
+            <textarea name="message" id="message" rows="6" required></textarea>
+          </div>
+          <div class="checkbox" style="align-self:center">
+            <input type="checkbox" name="newsletter" id="newsletter">
+            <label for="newsletter">Subcribe me to your newsletter</label>
+          </div>
+          <button type="submit" style="grid-column: span 2;">Send Message</button>
+        </form>
+      </section>
+      <section class="info">
+        <p>Email: sivgech@gmail.com</p>
+        <p>Phone: +855 168 168</p>
+        <div class="social-links">
+          <a href="https://github.com/slipzdev">Github</a>
+          <a href="https://linkedin.com/khonnarong">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 My Portfolio</p>
+    </footer>
+  </body>
+</html>

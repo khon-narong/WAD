@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title> — </title>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; }
+    html, body {font:16px/1.6 Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    
+    
+    .container{
+      /* វិធីសាស្ត្រពេញនិយមក្នុងការធ្វើគ្រោងវេបសាយដោយប្រើ grid fraction */
+      display: grid;
+      grid-template-columns: 200px 1fr 250px;
+      grid-template-rows: auto 1fr auto;
+
+      /* vh = viewport height ជាខ្នាតគិតជាភាគរយធៀបកម្ពស់ផ្ទៃទស្សនា។ 100vh គឺ ១០០%នៃកម្ពស់ផ្ទៃទស្សនា។ */
+      min-height: 100vh;
+      /* rem = root em ជាខ្នាតដែលធៀបទំហំអក្សររបស់ធាតុ html (បានកំណត់ខាងលើ១៦ភីកសែល)។ */
+      gap: 1rem;
+      padding: 1rem;
+      /*ចែកចេញ grids ជា៥តំបន់មានឈ្មោះ header, sidebar, main, ads, និង footerfooter តាមប្លង់ខាងក្រោម៖ */
+      grid-template-areas: "header header header" "sidebar main ads" "footer footer footer  ";
+    }
+    
+    /* ដាក់ grid item មានថ្នាក់សម្គាល់ក្នុងតំបន់បានបង្កើត */
+    .header{grid-area: header; background: #333333; color: #ffffff;}
+    .sidebar{grid-area: sidebar; background: #EEEEEE;}
+    .main{grid-area: main; background: #FFFFFF;}
+    .ads{grid-area: ads; background: #959595;}
+    .footer{grid-area: footer; background: #333333; color: #FFFFFF;}
+
+    .container > * {padding:1rem; border-radius:6px;}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">Header</header>
+    <aside class="sidebar">Sidebar</aside>
+    <main class="main">Main Content</main>
+    <aside class="ads">Advertising</aside>
+    <footer class="footer">Footer</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Advanced CSS Concepts — @media </title>
+  <style>
+    body {
+      background-color: #ffffff;
+    }
+    @media (min-width: 1200px){
+        body{
+          background-color: #eeeeee;
+        }
+      }
+
+      @media (max-width: 1199px) and (min-width: 992px){
+        body{
+          background-color: #cccccc;
+        }
+      }
+
+      @media (max-width: 991px) and (min-width: 768px){
+        body{
+          background-color: #999999;
+        }
+      }
+
+      @media (max-width: 767px) and (min-width: 576px){
+        body{
+          background-color: #666666;
+        }
+      }
+
+      @media (max-width: 575px){
+        body{
+          background-color: #333333;
+        }
+      }
+  </style>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+document.getElementById("es").innerHTML=" * ខ្លឹមសារធាតុ p ត្រូវបានថែមដោយ external script!"

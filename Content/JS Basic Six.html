@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Table with thead, tbody, and tfoot</title>
+  <link rel="stylesheet" href="../style/table.css">
+</head>
+<body>
+  <h1>User List</h1>
+  <div id="tableContainer"></div>
+  <script>
+    // ១. បង្កើតធាតុតារាង table, ធាតុក្បាលតារាង thead, ធាតុតួតារាង tbody, ជើងតារាង tfoot ហើយតាងដោយអថេរ។
+    // thead = table header, tbody = table body, tfoot = table footer។
+    const table = document.createElement("table");
+    const thead = document.createElement("thead");
+    const tbody = document.createElement("tbody");
+    const tfoot = document.createElement("tfoot");
+
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    table.appendChild(tfoot);
+
+    document.getElementById("tableContainer").appendChild(table);
+
+    const headerRow = document.createElement("tr");
+
+    const columnNames = ["Name","Age","Email"];
+
+    columnNames.forEach(columnName=>{
+      const th = document.createElement("th");
+
+      th.innerText = columnName;
+
+      headerRow.appendChild(th);
+    });
+
+    thead.appendChild(headerRow);
+
+    const users = [
+      {name: "An Pin",age: 22, email: "an.pin@email.com"},
+      {name: "In Davy", age: 21, email: "in.davy@email.com"},
+      {name: "Y Phally", age: 22, email: "y.phally@email.com"},
+      {name: "Ly Sokha", age: 22, email: "ly.sokha@email.com"},
+      {name: "Kha Narim", age: 22, email: "kha.narim@email.com"}
+    ];
+
+    const footerRow = document.createElement("tr");
+    const footerCell = document.createElement("td");
+
+    footerCell.colSpan = 3;
+
+    footerCell.innerText = `Total Users:${users.length}`;
+
+    footerRow.appendChild(footerCell);
+
+    tfoot.appendChild(footerRow);
+
+
+    users.forEach(user=>{
+      const row = document.createElement("tr");
+
+      const nameCell = document.createElement("td");
+      nameCell.innerText = user.name;
+
+      const ageCell = document.createElement("td");
+      ageCell.innerText = user.age;
+
+      const emailCell = document.createElement("td");
+      emailCell.innerText = user.email;
+
+      row.appendChild(nameCell);
+      row.appendChild(ageCell);
+      row.appendChild(emailCell);
+
+      tbody.appendChild(row);
+    })
+  </script>
+</body>
+</html>
